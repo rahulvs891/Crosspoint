@@ -1,52 +1,191 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>login form</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>home page</title>
+    <link rel="stylesheet" href=".">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/homepage.css">
 </head>
 <body>
-    <div class="login_box">
-    <img src="Images/login-avatar.jpeg" alt="login_avatar" class="avatar">
-    <h1>Login</h1>
-    <form id="login-form">
-        <p>Username</p>
-        <input type="text" id="login-email" placeholder="Enter Email-id">
-        <p>Password</p>
-        <input type="password" id="login-password" placeholder="Enter Password">
-        <input type="submit" id="submit" value="Login">
-    </form>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
 
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-
-        <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyAhk12USpia1Xrzxllt564rgpfHAKmsmcE",
-            authDomain: "meclabs-teamalpha.firebaseapp.com",
-            projectId: "meclabs-teamalpha",
-            storageBucket: "meclabs-teamalpha.appspot.com",
-            messagingSenderId: "998541348761",
-            appId: "1:998541348761:web:3cf679d18b7a4448830d08"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        //make firebase and auth refernces
-
-        const auth = firebase.auth();
-        const db = firebase.firestore();
-
-
-            // uodate firestore sttings
-        db.settings({timestampsInSnapshots: true});
-        </script>
-        <script src ="Html/auth.js"></script>
-
+    <!-- header starts -->
+    <!-- nav bar starts -->
+    <div class="head">
+        <header>
+            <img src="./Images/logo.jpeg" alt="" class="logo">
+            <nav>
+                <ul class="nav-area">
+                    <li class="home"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
+                    <li class="books"><a href="./Html/clubs.html"><i class="fa fa-book" aria-hidden="true"></i>CLUBS</a></li>
+                    <li class="about"><a href="./Html/events.html"><i class="fa fa-info" aria-hidden="true"></i>EVENTS</a></li>
+                    <li class="contact"><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>ABOUT US</a></li>
+                </ul>
+            </nav>
+            <div class="button">
+            <a href="login.html" class="btn-area">login</a>
+            <a href="signup.html" class="btn-area">signup</a>
+            </div>
+    
+        </header>
     </div>
+    <!-- nav bar ends -->
+    <!-- header ends -->
+
+
+    <!-- image starts -->
+    <div class="front-image">TOGETHER,WE HAVE IT ALL</div>
+    <!-- image ends -->
+
+
+    <!-- slider starts -->
+    <h1 class="slider-heading">UPCOMING EVENTS</h1>
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <div class="slide first">
+                <img src="./Images/slide1.jpg" alt="s1">
+            </div>
+            <div class="slide">
+                <img src="./Images/slide2.jpg" alt="s2">
+            </div>
+            <div class="slide">
+                <img src="./Images/slide3.jpg" alt="s3">
+            </div>
+            <div class="slide">
+                <img src="./Images/slide4.png" alt="s4">
+            </div>
+        </div>
+        <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1
+            }
+        }, 5000)
+    </script>
+    <!-- slider ends -->
+    <!--calender starts-->
+    <section>
+        <div class="leftbox">
+            <div class="content">
+                <h1>NOTICE</h1>
+            </div>
+        </div>
+        <div class="events">
+            <ul>
+                <li>
+                    <div class="time">
+                        <h2>13<br><span>JANUARY 2021</span></h2>
+                    </div>
+                    <div class="details">
+                        <h3>ALMA FIESTA</h3>
+                        <p><b>Alma Fiesta gives you the finest of opportunities and jam packed platform to show your hidden talent. Hospitality is our prime concern</b>
+                        </p>
+                        <a href="https://tatainnoverse.com/tatacruciblehackathon2021/team-registration.php">Register</a>
+                    </div>
+                    <div style="clear:both;"></div>
+                </li>
+                <li>
+                    <div class="time">
+                        <h2>7<br><span>MARCH 2021</span></h2>
+                    </div>
+                    <div class="details">
+                        <h3>TECHKRITI</h3>
+                        <p><b>Techkriti is an annual four-day inter-collegiate technical and entrepreneurship festival at the Indian Institute of Technology Kanpur which is held each March. </b>
+                        </p>
+                        <a href="https://hacked.devfolio.co/">Register</a>
+                    </div>
+                    <div style="clear:both;"></div>
+                </li>
+                <li>
+                    <div class="time">
+                        <h2>29<br><span>DECEMBER 2021</span></h2>
+                    </div>
+                    <div class="details">
+                        <h3>TECHFEST</h3>
+                        <p><b>Techfest is the annual science and technology festival of Indian Institute of Technology Bombay, consisting of social
+                        initiatives and outreach programs around the year.</b>
+                        </p>
+                        <a href="https://cubehighwayshackathon.hackerearth.com/login/?next=/challenges/hackathon/cube-highways-hackathon-by-mitsubishi-and-nec/add-information/">Register</a>
+                    </div>
+                    <div style="clear:both;"></div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- footer starts -->
+    <footer>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>About us</h2>
+                <p>Club core members or people with permission can post about the events in their pages.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quickLink">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Info</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span>IIT BOMBAY<br>
+                            Main Gate Rd, IIT Area, Powai, Mumbai<br>Maharashtra 400076</span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <p><a href="tel:12345678900">+1 234 567 8900</a><br>
+                            <a href="tel:12345678900">+1 234 567 8900</a>
+                        </p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <p><a href="mailto:eventmanage@gmail.com">helm@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyrightText">
+            <p>Copyright © . All rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- footer ends -->
+
+
+
+
 </body>
 
-
+</html>

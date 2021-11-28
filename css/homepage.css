@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -23,64 +25,77 @@ body {
 .logo {
   margin-top: 20px;
   margin-left: 20px;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+  height: 125px;
+  width: 125px;
+  border-radius: 25px;
   float: left;
+  cursor: pointer;
+  position: relative;
+  right: 190px;
 }
 /* code for navigation bar starts */
-.nav-bar {
-  background: linear-gradient(to bottom, #315f8a, #103053);
-  text-align: right;
-  height: 75px;
-  width: 100%;
+header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  justify-content: space-between;
   align-items: center;
-  clear: left;
+  padding: 20px 70px;
+  font-size: 18px;
 }
-.nav-bar ul {
-  display: inline-block;
+.head {
+  border-radius: 0px;
+  padding-bottom: 0.5px;
+  position: absolute;
+  margin-left: 10rem;
+}
+.nav-area {
   list-style: none;
-  margin-right: 150px;
 }
-.nav-bar ul li {
-  text-align: center;
-  float: left;
+.nav-area li {
+  display: inline-block;
+  padding: 0 15px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
   width: 150px;
-  margin: 10px;
-  margin-right: 110px;
-  padding: 15px;
-  border-radius: 5px;
-  color: white;
 }
-.nav-bar ul li a {
+.nav-area li a {
   text-decoration: none;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-}
-.home,
-.nav-bar ul li:hover {
-  background: linear-gradient(to bottom, rgb(30, 117, 194), rgb(15, 67, 112));
-  border-radius: 3px;
+  transition: 0.3s;
   color: rgb(255, 255, 255);
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.5rem;
 }
-.nav-bar .home,
-.nav-bar .home a,
-.nav-bar ul li:hover a {
-  color: rgb(255, 255, 255);
+i {
+  margin-right: 5px;
 }
-.nav-bar .fa {
-  margin-right: 3px;
-  font-size: 20px;
+.nav-area li a:hover {
+  color: #d22938;
+}
+.button {
+  position: relative;
+  right: -80px;
+}
+.btn-area {
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: #d22938;
+  margin-right: 20px;
+  text-decoration: none;
 }
 /* code for navigation bar ends */
 .front-image {
-  min-height: 80vh;
+  min-height: 90vh;
   color: white;
   font-weight: 900;
-  font-size: 60px;
-  font-family: "Cinzel Decorative", cursive;
+  font-size: 70px;
+  font-family: "Fjalla One", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,15 +112,13 @@ body {
 }
 /* slide show starts */
 .slider-heading {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Fjalla One", sans-serif;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 70px;
   padding: 20px;
   font-size: 60px;
   font-weight: bold;
-  color: #03254c;
-  text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474,
-    -3px 6px 1px #787777, -4px 8px 1px #aaaaaa;
+  color: #252149;
 }
 .slider {
   position: relative;
@@ -230,6 +243,7 @@ section .leftbox .content h1 {
   padding: 0;
   font-size: 50px;
   text-transform: uppercase;
+  font-family: "Fjalla One", sans-serif;
 }
 section .events {
   position: relative;
@@ -318,6 +332,9 @@ section .events ul li .details a:hover {
   border-color: #e91e63;
 }
 /* box ends */
+/*calender starts*/
+
+/*calender ends*/
 /* footer starts */
 footer {
   position: relative;
